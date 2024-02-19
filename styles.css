@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Create four unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.left, .right {
+  width: 15%;
+}
+
+.nav {
+  width: 30%;
+  padding-right: 60px;
+}
+
+.main {
+  width: 40%;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .nav, .main {   
+    width: 100%;
+    padding: 10px;
+  }
+  .left, .right {   
+    display: none;
+  }
+}
+
+
+body {
+  background-color: #fff;
+  font-family: 'Archivo', sans-serif;
+  color: #222;
+  font-size: 100%;
+  line-height: 1.7;
+}
+
+a {
+  color: #D94636;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #D94636;
+  text-decoration: underline;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+
+
+/* Left column */
+
+h2 {
+  font-size: 2.1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+
+h2 img {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+
+h2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h2 a:hover {
+  color: #D94636;
+  text-decoration: none;
+}
+
+
+h4 {
+  font-size: 0.7em;
+  font-weight: 800;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  line-height: 2.1;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+h4 a {
+  color: #D94636;
+  text-decoration: none;
+}
+
+h4 a:hover {
+  color: #D94636;
+  text-decoration: underline;
+}
+
+h7 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+
+h8 {
+  font-size: 0.7em;
+  font-weight: 800;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+}
+
+
+/* Right column */
+
+h3 {
+  font-size: 0.8em;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+/* Nav menu */
+
+
+h6 {
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+h6 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h6 a:hover {
+  color: #D94636;
+  text-decoration: none;
+}
+
+
+
+.contact i {
+  padding-right: 15px;
+}
+
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #D94636;
+}
+
+
+ul.dashed {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+}
+
+ul.dashed li {
+    padding-bottom: 4px;
+}
+
+ul.dashed > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
