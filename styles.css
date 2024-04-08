@@ -51,17 +51,17 @@ body {
 }
 
 a {
-  color: #D94636;
+  color: #820000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #D94636;
+  color: #820000;
   text-decoration: underline;
 }
 
 p {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 
@@ -78,7 +78,7 @@ h2 {
 h2 img {
   margin-top: 20px;
   display: block;
-  width: 100%;
+  width: 75%;
 }
 
 h2 a {
@@ -87,7 +87,7 @@ h2 a {
 }
 
 h2 a:hover {
-  color: #D94636;
+  color: #820000;
   text-decoration: none;
 }
 
@@ -97,23 +97,21 @@ h4 {
   font-weight: 800;
   letter-spacing: 1.9px;
   text-transform: uppercase;
-  line-height: 2.1;
-  padding-top: 40px;
-  padding-bottom: 10px;
+  padding-top: 20px;
 }
 
 h4 a {
-  color: #D94636;
+  color: #820000;
   text-decoration: none;
 }
 
 h4 a:hover {
-  color: #D94636;
+  color: #820000;
   text-decoration: underline;
 }
 
 h7 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 700;
 }
 
@@ -129,7 +127,7 @@ h8 {
 /* Right column */
 
 h3 {
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 1.9;
   font-weight: 400;
 }
@@ -138,7 +136,7 @@ h3 {
 
 
 h6 {
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-weight: 700;
 }
 
@@ -148,7 +146,7 @@ h6 a {
 }
 
 h6 a:hover {
-  color: #D94636;
+  color: #820000;
   text-decoration: none;
 }
 
@@ -164,7 +162,7 @@ h6 a:hover {
 }
 
 .contact a:hover {
-  color: #D94636;
+  color: #820000;
 }
 
 
