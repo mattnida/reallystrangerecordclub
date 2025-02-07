@@ -1,184 +1,162 @@
-* {
-  box-sizing: border-box;
-}
-
-/* Create four unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.left, .right {
-  width: 15%;
-}
-
-.nav {
-  width: 30%;
-  padding-right: 60px;
-}
-
-.main {
-  width: 40%;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .nav, .main {   
-    width: 100%;
-    padding: 10px;
-  }
-  .left, .right {   
-    display: none;
-  }
-}
-
-
+/* Basic Styling */
 body {
-  background-color: #fff;
-  font-family: 'Archivo', sans-serif;
-  color: #222;
-  font-size: 100%;
-  line-height: 1.7;
+  font-family: 'Liter', sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-a {
-  color: #820000;
-  text-decoration: none;
+/* Container for layout */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-a:hover {
-  color: #820000;
-  text-decoration: underline;
+/* Logo Styling */
+header {
+  margin-top: 5vh;  /* Space from top */
 }
 
-p {
-  padding-bottom: 0px;
+.logo {
+  width: 400px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 3em; /* Space below logo */
+}
+
+/* Event Details Card Styling */
+.event-card {
+  position: relative;
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 2em;
+  flex: 1;
+  box-shadow: 0px 0px 10px rgba(209, 244, 255, 0.4);
+  /* Remove the border-radius */
+}
+
+.event-card::before {
+  content: ''; 
+  position: absolute; 
+  top: -2px;  
+  left: -2px;  
+  right: -2px; 
+  bottom: -2px; 
+  background: linear-gradient(135deg, #FF00FF, #FF8E00); /* The gradient */
+  z-index: -1; /* Places the gradient outline behind the card */
+  /* Removed the border-radius here too */
 }
 
 
-
-/* Left column */
-
-h2 {
-  font-size: 2.1em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 0px;
+.event-details p {
+  color: #fff;
 }
 
-h2 img {
-  margin-top: 20px;
-  display: block;
-  width: 75%;
-}
-
-h2 a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-h2 a:hover {
-  color: #820000;
-  text-decoration: none;
-}
-
-
-h4 {
-  font-size: 0.7em;
+.event-date {
+  font-size: 2em;
   font-weight: 800;
-  letter-spacing: 1.9px;
-  text-transform: uppercase;
-  padding-top: 20px;
+  color: #D1F4FF;
 }
 
-h4 a {
-  color: #820000;
-  text-decoration: none;
+.event-time {
+  font-size: 1.2em;
+  margin-top: 5px;
 }
 
-h4 a:hover {
-  color: #820000;
-  text-decoration: underline;
-}
-
-h7 {
-  font-size: 1.4em;
-  font-weight: 700;
-}
-
-
-h8 {
-  font-size: 0.7em;
-  font-weight: 800;
-  letter-spacing: 1.9px;
-  text-transform: uppercase;
-}
-
-
-/* Right column */
-
-h3 {
-  font-size: 1.0em;
-  line-height: 1.9;
-  font-weight: 400;
-}
-
-/* Nav menu */
-
-
-h6 {
+.event-address {
   font-size: 1.1em;
-  font-weight: 700;
+  color: #fff;
 }
 
-h6 a {
-  color: #ffffff;
+.event-address a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  font-weight: 800;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.event-address a:hover {
+  color: #D1F4FF;
+}
+
+
+/* Description Styling */
+.description {
+  margin-top: 50px;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.0em;
+  line-height: 1.8em;
+}
+
+h2 span.highlight {
+  font-weight: bold;
+  background-color: #D1F4FF;
+  color: #000;
+  border-radius: 4px; /* Slightly rounded corners */
+  padding: 2px 4px; /* Small left-right padding */
+}
+
+p span.highlight {
+  font-weight: bold;
+  background-color: #D1F4FF;
+  color: #000;
+  border-radius: 4px; /* Slightly rounded corners */
+  padding: 2px 4px; /* Small left-right padding */
+}
+
+.description a {
+  color: #D1F4FF;
+  font-weight: 600;
   text-decoration: none;
 }
 
-h6 a:hover {
-  color: #820000;
+.description a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  font-size: 0.8em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+footer a {
   text-decoration: none;
+  color: white;
+  font-weight: 800;
+  transition: color 0.3s, border-color 0.3s;
 }
 
-
-
-.contact i {
-  padding-right: 15px;
+footer a:hover {
+  color: #D1F4FF;
 }
 
-.contact a {
-  color: #ffffff;
-  text-decoration: none;
-}
+/* Responsive Layout */
+@media (max-width: 768px) {
+  /* Adjust Logo Size for Mobile */
+  .logo {
+    width: 70%;
+  }
 
-.contact a:hover {
-  color: #820000;
-}
+  .event-details p {
+    font-size: 1.2em;
+  }
 
+  .description {
+    font-size: 1em;
+  }
 
-ul.dashed {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 1em;
-}
-
-ul.dashed li {
-    padding-bottom: 4px;
-}
-
-ul.dashed > li:before {
-    display: inline-block;
-    content: "-";
-    width: 1em;
-    margin-left: -1em;
+  footer a {
+    font-size: 0.9em;
+  }
 }
