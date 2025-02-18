@@ -1,12 +1,15 @@
 /* Basic Styling */
 body {
-  font-family: 'Liter', sans-serif;
+  font-family: 'Funnel Sans', sans-serif;
+  font-weight: 300;
   background-color: #000;
   color: #fff;
   margin: 0;
   padding: 0;
   text-align: center;
 }
+
+
 
 /* Container for layout */
 .container {
@@ -23,65 +26,141 @@ header {
 .logo {
   width: 400px; /* Adjust size as needed */
   height: auto;
-  margin-bottom: 3em; /* Space below logo */
+  margin-bottom: 4em; /* Space below logo */
 }
 
-/* Event Details Card Styling */
-.event-card {
-  position: relative;
-  background-color: #111;
-  padding: 20px;
+/* Add styling for tagline section */
+.tagline {
+  color: #ec24da;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
-  margin-bottom: 2em;
+  max-width: 600px; /* Match event card width */
+  margin: 20px auto 10px auto; /* Center align with space below */
+}
+
+/* Event and Links Menu Container */
+.event-and-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border: 1px solid #ec24da;
+  background-color: #111;
+  padding: 15px;
+}
+
+.event-card {
+  width: 66.66%; /* Event card takes up two-thirds of the width */
+  padding: 20px;
+}
+
+.links-menu {
+  width: 30%; /* Links menu takes up one-third of the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the links vertically */
+  margin-left: 20px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.6em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.menu-link .icon {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #ec24da;
+}
+
+.menu-link:hover {
+  color: #ec24da;
+}
+
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .event-and-links {
+    flex-direction: column; /* Stack the event card and links menu vertically */
+    align-items: center; /* Center the content */
+  }
+
+  .event-card {
+    width: 100%; /* Event card takes full width on smaller screens */
+    margin-bottom: 20px; /* Space between event card and links menu */
+  }
+
+  .links-menu {
+    width: 100%; /* Full width of the container */
+    margin-top: 5px; /* Space above links menu */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Vertically center the links */
+    gap: 10px; /* Space between the links */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+  }
+
+  .menu-link {
+    font-size: 0.7em; /* Smaller font size for the links */
+    padding: 5px 10px; /* Reduced padding for compactness */
+    margin: 3px; /* Reduced margin for compactness */
+    text-align: center; /* Center the text inside each link */
+    white-space: nowrap; /* Prevent wrapping of text inside the link */
+  }
+}
+
+
+
+/* Compact event card styling */
+.event-card {
+  text-align: center;
   flex: 1;
-  box-shadow: 0px 0px 10px rgba(209, 244, 255, 0.4);
-  /* Remove the border-radius */
+  line-height: 1.4em;
 }
-
-.event-card::before {
-  content: ''; 
-  position: absolute; 
-  top: -2px;  
-  left: -2px;  
-  right: -2px; 
-  bottom: -2px; 
-  background: linear-gradient(135deg, #FF00FF, #FF8E00); /* The gradient */
-  z-index: -1; /* Places the gradient outline behind the card */
-  /* Removed the border-radius here too */
-}
-
 
 .event-details p {
   color: #fff;
+  margin: 5px 0;
 }
 
 .event-date {
-  font-size: 2em;
-  font-weight: 800;
-  color: #D1F4FF;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #ec24da;
+  padding-top: 10px;
 }
 
 .event-time {
-  font-size: 1.2em;
-  margin-top: 5px;
+  font-size: 1.1em;
+  padding-bottom: 10px;
 }
 
 .event-address {
-  font-size: 1.1em;
+  font-size: 0.9em;
   color: #fff;
 }
 
 .event-address a {
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: white;
-  font-weight: 800;
+  font-weight: 600;
   transition: color 0.3s, border-color 0.3s;
+  text-transform: uppercase;
 }
 
 .event-address a:hover {
-  color: #D1F4FF;
+  color: #ec24da;
 }
+
 
 
 /* Description Styling */
@@ -91,29 +170,30 @@ header {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.0em;
+  font-size: 0.9em;
   line-height: 1.8em;
 }
 
 h2 span.highlight {
   font-weight: bold;
-  background-color: #D1F4FF;
+  background-color: #ec24da;
   color: #000;
-  border-radius: 4px; /* Slightly rounded corners */
   padding: 2px 4px; /* Small left-right padding */
+  text-transform: uppercase;
 }
 
 p span.highlight {
   font-weight: bold;
-  background-color: #D1F4FF;
+  background-color: #ec24da;
   color: #000;
-  border-radius: 4px; /* Slightly rounded corners */
   padding: 2px 4px; /* Small left-right padding */
+  text-transform: uppercase;
+
 }
 
 .description a {
-  color: #D1F4FF;
-  font-weight: 600;
+  color: #ec24da;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -126,7 +206,7 @@ footer {
   margin-top: 3em;
   margin-bottom: 3em;
   font-size: 0.8em;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -138,7 +218,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #D1F4FF;
+  color: #ec24da;
 }
 
 /* Responsive Layout */
@@ -146,14 +226,6 @@ footer a:hover {
   /* Adjust Logo Size for Mobile */
   .logo {
     width: 70%;
-  }
-
-  .event-details p {
-    font-size: 1.2em;
-  }
-
-  .description {
-    font-size: 1em;
   }
 
   footer a {
